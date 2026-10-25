@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Login · TradeVision</title>
+
+    <link rel="stylesheet" href="/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script defer src="/js/common.js"></script>
+    <script defer src="/js/login.js"></script>
+</head>
+
+<body class="login-body">
+
+    <main class="login-card">
+
+        <a class="brand" href="/login.html">
+            <span class="brand-icon">T</span>
+            TradeVision
+        </a>
+
+        <p class="eyebrow mt-4">
+            EXPORT ORDER TRACKING
+        </p>
+
+        <h1>Welcome back.</h1>
+
+        <p class="text-secondary">
+            Sign in to manage your export business.
+        </p>
+
+        <div
+            id="message"
+            role="status"
+            aria-live="polite"
+        ></div>
+
+        <form id="login-form">
+
+            <label
+                class="form-label mt-3"
+                for="username"
+            >
+                Username
+            </label>
+
+            <input
+                class="form-control"
+                id="username"
+                name="username"
+                required
+                maxlength="60"
+                autocomplete="username"
+            >
+
+            <label
+                class="form-label mt-3"
+                for="password"
+            >
+                Password
+            </label>
+
+            <input
+                class="form-control"
+                id="password"
+                name="password"
+                type="password"
+                required
+                maxlength="200"
+                autocomplete="current-password"
+            >
+
+            <button
+                class="btn btn-primary w-100 mt-4"
+                id="sign-in"
+            >
+                Sign in
+            </button>
+
+        </form>
+
+        <p class="small text-secondary mt-4 mb-0">
+            Use the administrator credentials you created during setup.
+        </p>
+
+    </main>
+
+</body>
+</html>

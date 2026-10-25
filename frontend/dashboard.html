@@ -1,0 +1,146 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Overview · TradeVision</title>
+
+    <link rel="stylesheet" href="/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script defer src="/js/common.js"></script>
+    <script defer src="/js/dashboard.js"></script>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <a class="brand" href="/dashboard.html">
+            <span class="brand-icon">T</span>
+            TradeVision
+        </a>
+
+        <p class="nav-caption">EXPORT MANAGEMENT</p>
+
+        <nav aria-label="Main navigation">
+            <a href="/dashboard.html" class="active" aria-current="page">
+                Overview
+            </a>
+            <a href="/products.html">Products</a>
+            <a href="/customers.html">Customers</a>
+            <a href="/orders.html">Orders</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <span>Simple exports. Clear progress.</span>
+
+            <button id="logout" class="btn btn-outline-light w-100 mt-3">
+                Log out
+            </button>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <header class="page-heading">
+            <div>
+                <p class="eyebrow">TRADEVISION / OVERVIEW</p>
+                <h1>Overview</h1>
+
+                <p class="text-secondary">
+                    A clear view of your export orders and markets.
+                </p>
+            </div>
+
+            <span class="admin-pill">Admin workspace</span>
+        </header>
+
+        <div id="message" role="status" aria-live="polite"></div>
+
+        <div class="row g-3 mb-4" id="cards">
+            <p>Loading summary…</p>
+        </div>
+
+        <div class="quick-actions mb-4">
+            <a class="btn btn-primary" href="/orders.html">
+                + Create order
+            </a>
+
+            <a class="btn btn-outline-secondary" href="/products.html">
+                Manage products
+            </a>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <section class="panel h-100">
+                    <h2>Monthly order value</h2>
+
+                    <p class="small text-secondary">
+                        Latest 12 months with orders · all statuses
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Orders</th>
+                                    <th>Value (USD)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="monthly"></tbody>
+
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-6">
+                <section class="panel h-100">
+                    <h2>Orders by country</h2>
+
+                    <p class="small text-secondary">
+                        Based on customers’ current country details
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Orders</th>
+                                    <th>Value (USD)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="countries"></tbody>
+
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <p class="small text-secondary mt-3">
+            Order value includes every status; it is not a record of
+            payments received.
+        </p>
+
+        <footer>
+            TradeVision · Export Order Tracking System
+            <span>All amounts in USD</span>
+        </footer>
+
+    </main>
+
+</body>
+</html>

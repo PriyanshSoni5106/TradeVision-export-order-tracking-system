@@ -1,0 +1,26 @@
+
+{
+    "name": "tradevision",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Basic export order tracking system",
+    "main": "server.js",
+    "engines": {
+        "node": ">=22"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "setup": "node scripts/setup.js",
+        "seed": "node scripts/seed.js",
+        "test": "node --test test/*.test.js"
+    },
+    "dependencies": {
+        "express": "^5.1.0",
+        "mysql2": "^3.14.0",
+        "dotenv": "^16.5.0",
+        "express-session": "^1.18.1",
+        "express-rate-limit": "^7.5.0",
+        "helmet": "^8.1.0",
+        "bootstrap": "^5.3.6"
+    }
+}
